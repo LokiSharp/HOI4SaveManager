@@ -1,0 +1,119 @@
+﻿equipments={
+	infantry_equipment_0={
+		id={ id=2 type=70 }
+		max_version=0
+		obsolete=yes
+		is_frame=no
+		creator="GER"
+		origin="---"
+		can_upgrade_type=yes
+	}
+	transport_plane_equipment_1={
+		id={ id=3 type=70 }
+		max_version=0
+		is_frame=no
+		creator="GER"
+		origin="---"
+		manpower=80
+	}
+	small_plane_airframe_0={
+		id={ id=1048 type=70 }
+		max_version=1
+		obsolete=yes
+		is_frame=yes
+		creator="GER"
+		origin="---"
+		can_upgrade_type=yes
+		can_upgrade_modules=yes
+		manpower=20
+		modules={
+			engine_type_slot=engine_1_1x
+		}
+	}
+	light_tank_chassis_0={
+		id={ id=1062 type=70 }
+		max_version=1
+		obsolete=yes
+		is_frame=yes
+		creator="GER"
+		origin="---"
+		can_upgrade_type=yes
+		manpower=2
+		upgrades={
+			upgrades={
+				{ tank_nsb_engine_upgrade 0}
+ { tank_nsb_armor_upgrade 0}
+ 			}
+		}
+		modules={
+			engine_type_slot=tank_gasoline_engine
+			turret_type_slot=tank_light_one_man_tank_turret
+			suspension_type_slot=tank_bogie_suspension
+			armor_type_slot=tank_riveted_armor
+		}
+	}
+	ship_hull_heavy_2={
+		id={ id=1094 type=70 }
+		name="Scharnhorst Class"
+		version=1
+		parent_id={ id=1073 type=70 }
+		is_frame=no
+		creator="GER"
+		origin="---"
+		division_names_group="GER_BB_HISTORICAL"
+		can_upgrade_modules=yes
+		manpower=5200
+		role_icon_index=1
+		upgrades={
+			upgrades={
+				{ ship_gun_upgrade 0}
+ { ship_armor_upgrade 0}
+ { ship_engine_upgrade 0}
+ { ship_reliability_upgrade 0}
+ 			}
+		}
+		modules={
+			fixed_ship_anti_air_slot=ship_anti_air_1
+			fixed_ship_engine_slot=heavy_ship_engine_2
+			fixed_ship_secondaries_slot=ship_secondaries_1
+			fixed_ship_armor_slot=ship_armor_bc_1
+			front_1_custom_slot=ship_anti_air_1
+			mid_2_custom_slot=ship_secondaries_1
+			rear_1_custom_slot=ship_heavy_battery_2
+			fixed_ship_battery_slot=ship_heavy_battery_2
+			fixed_ship_fire_control_system_slot=ship_fire_control_system_0
+		}
+	}
+	ship_hull_pre_dreadnought={
+		id={ id=1095 type=70 }
+		name="Deutschland Class"
+		version=1
+		parent_id={ id=1075 type=70 }
+		obsolete=yes
+		is_frame=no
+		creator="GER"
+		origin="---"
+		division_names_group="GER_BB_HISTORICAL"
+		can_upgrade_type=yes
+		can_upgrade_modules=yes
+		manpower=3200
+		role_icon_index=1
+		upgrades={
+			upgrades={
+				{ ship_gun_upgrade 0}
+ { ship_armor_upgrade 0}
+ { ship_engine_upgrade 0}
+ { ship_reliability_upgrade 0}
+ 			}
+		}
+		modules={
+			fixed_ship_anti_air_slot=ship_anti_air_1
+			fixed_ship_engine_slot=heavy_ship_engine_2
+			fixed_ship_secondaries_slot=ship_secondaries_1
+			fixed_ship_armor_slot=ship_armor_bb_1
+			front_1_custom_slot=ship_anti_air_1
+			fixed_ship_battery_slot=ship_heavy_battery_1
+			fixed_ship_fire_control_system_slot=ship_fire_control_system_0
+		}
+	}
+}

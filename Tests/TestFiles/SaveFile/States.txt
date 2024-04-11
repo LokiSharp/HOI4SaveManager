@@ -1,0 +1,40 @@
+﻿states={
+	1={
+		buildings={
+			infrastructure={
+				offsite_building=no
+				level={
+					100.000 100.000 
+				}
+			}
+			industrial_complex={
+				offsite_building=no
+				level={
+					100.000 
+				}
+			}
+			air_base={
+				offsite_building=no
+				level={
+					100.000 
+				}
+			}
+		}
+		owner="FRA"
+		manpower_pool={
+			available=6
+			locked=317967
+			total=323294
+		}
+		resistance={
+		}
+		flags={
+		}
+		demilitarized=no
+		is_border_conflict=no
+		state_category=town
+		variables={
+			random=1
+		}
+	}
+}

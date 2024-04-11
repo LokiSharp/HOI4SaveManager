@@ -1,0 +1,11 @@
+﻿weather={
+	provinces={
+		"0"={
+			province=0
+			temperature=0.000
+		}
+	}
+	current_province=1
+	current_region=1
+	seed=22345
+}

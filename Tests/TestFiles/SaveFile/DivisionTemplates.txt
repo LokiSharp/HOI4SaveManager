@@ -1,0 +1,31 @@
+﻿division_templates={
+	division_template={
+		id={ id=3 type=52 }
+		name="Infanterie-Division"
+		division_names_group="GER_Inf_01"
+		country="GER"
+		original_tag="GER"
+		foreign_template_tag="---"
+		priority=1
+		allow_new_equipment=yes
+		allow_foreign_equipment=yes
+		support={
+			engineer={ x=0 y=0 }
+			artillery={ x=0 y=1 }
+		}
+		regiments={
+			infantry={ x=0 y=0 }
+			infantry={ x=0 y=1 }
+			infantry={ x=0 y=2 }
+			infantry={ x=1 y=0 }
+			infantry={ x=1 y=1 }
+			infantry={ x=1 y=2 }
+			infantry={ x=2 y=0 }
+			infantry={ x=2 y=1 }
+			infantry={ x=2 y=2 }
+		}
+		template_counter=-1
+		ingame_set_template_counter=no
+		origin_type=master_host
+	}
+}

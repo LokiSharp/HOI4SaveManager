@@ -1,0 +1,35 @@
+﻿strategic_operatives={
+	strategic_operative={
+		0={
+			recent_propaganda_effort={
+				{
+					war_support=0.00100
+					stability=0.00100
+				}
+ 
+			}
+			propaganda_weekly_drift={
+				war_support=0.00100
+				stability=0.00100
+			}
+			subversive_activity_level={
+				previous_error=0.000
+				integral=0.000
+				last_output=0.000
+				value=0.000
+				proportional_factor=0.010
+				integral_factor=0.001
+				derivative_factor=0.000
+			}
+			danger_level={
+				previous_error=0.000
+				integral=0.000
+				last_output=0.000
+				value=0.000
+				proportional_factor=0.010
+				integral_factor=0.001
+				derivative_factor=0.000
+			}
+		}
+	}
+}

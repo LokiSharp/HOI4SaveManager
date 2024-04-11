@@ -1,0 +1,237 @@
+﻿HOI4txt
+player="GER"
+ideology=fascism
+date="1936.1.1.12"
+difficulty="normal"
+version="Bolivar v1.14.4.d429 (e1d1)"
+ironman="GER"
+tutorial=no
+player_countries={
+	GER={
+		user="LokiSharp"
+		country_leader=yes
+		id=1
+	}
+}
+save_version=22
+dlcs=4095
+achievement={
+	122 169 171 173 189 196 205 
+}
+session=43
+next_trade_route_update_country_idx=0
+cached_active_trade_route_count=22930
+speed=0
+game_unique_seed=570144884
+game_unique_id="33e5b5e0-e984-4e00-8fe1-dbff6867e09a"
+multiplayer_random_seed=2028976982
+multiplayer_random_count=2811
+debug_current_ref_id=2151
+unit=2544
+order_index=1
+front_index=743
+theatre_index=85
+theater_group_index=32
+military_deployment_line_index=1
+military_deployment_conveyor_index=1
+equipment_variant_index=3435
+country_leader_index=1
+navy_id=63
+land_combat_id=0
+railway_gun_index={
+	id=0
+}
+industry_organisation_index={
+	id=2377
+}
+id_counter_store={
+}
+saved_event_target={
+	country="CHI"
+	name="WTT_current_china_leader"
+}
+saved_event_target={
+	country="PRC"
+	name="WTT_communist_china"
+}
+saved_event_target={
+	country="YUG"
+	name="yugoslavia_wedding_partner"
+}
+flags={
+	MTG_second_london_conference={
+		value=1
+		date="1936.1.1.12"
+	}
+	MTG_naval_treaty_signatories={
+		value=5
+		date="1936.1.1.12"
+	}
+	NOR_trotsky_in_norway={
+		value=1
+		date="1936.1.1.12"
+	}
+	second_italo_ethiopian_war_flag={
+		value=1
+		date="1936.1.1.12"
+	}
+}
+gameplaysettings={
+	difficulty="normal"
+	ironman=1
+	historical=1
+}
+start_date="1936.1.1.12"
+difficulty_settings={
+}
+game_rules={
+}
+id={ id=2151 type=4713 }
+fired_event_names={
+}
+pending_events={
+}
+power_balance={
+	power_balances={
+		{
+			template="DEN_balance_of_power"
+			value=-0.100
+			left_side="DEN_welfare_side"
+			right_side="DEN_warfare_side"
+			trending_side="DEN_welfare_side"
+			countries={
+				"DEN"
+			}
+		}
+		{
+			template="FIN_power_balance"
+			value=-0.450
+			left_side="FIN_bad_side"
+			right_side="FIN_good_side"
+			trending_side="FIN_bad_side"
+			countries={
+				"FIN"
+			}
+			sides={
+				{
+					id="FIN_bad_side"
+					gfx="GFX_bop_FIN_[GetLeaderBopIcon]_bad_improved_side"
+				}
+				{
+					id="FIN_good_side"
+					gfx="GFX_bop_FIN_[GetLeaderBopIcon]_good_side"
+				}
+			}
+		}
+		{
+			template="ETH_centralization_balance"
+			value=-0.250
+			left_side="ETH_mesafint_side"
+			right_side="ETH_mekwanint_side"
+			trending_side="ETH_mesafint_side"
+			countries={
+				"ETH"
+			}
+		}
+	}
+}
+combat={
+	history={
+	}
+}
+peace_conference={
+}
+
+threat={
+}
+variables={
+	random=0
+	atomic_research_race=0.000
+	nordic_conflict_scale=0.000
+	nordic_conflict_scale_base_increase=5.000
+	nordic_conflict_scale_border_war_th=0.000
+	nordic_conflict_scale_max=100.000
+	nordic_conflict_scale_regional_war_th=40.000
+	nordic_conflict_scale_total_war_th=90.000
+	nordic_current_risk=25.000
+	nordic_risk_percentage_border_war=25.000
+	nordic_risk_percentage_regional_war=55.000
+	nordic_risk_percentage_total_war=90.000
+	nordic_war_threshold=3.000
+	platonic_big_communist=1079398.227
+	platonic_big_democratic=1078022.997
+	platonic_big_fascist=1079133.511
+	platonic_big_non_aligned=1078544.451
+	platonic_democratic_ally_leader=1078414.917
+	platonic_democratic_sleeping_giant=1078022.997
+	platonic_fascist_bully=1079133.511
+	swe_refugee_from_war_total_manpower_gained=25441.000
+	swe_refugee_from_war_valid_countries=22.000
+	swe_refugee_max_manpower_country=1079133.511
+	swe_refugee_max_manpower_gained=8000.000
+}
+average_major_ic=75.714
+tension_scaling_base_country="SOV"
+tech_sharing_group={
+	id="commonwealth_research"
+	countries={
+		"ENG"
+		"AST"
+		"CAN"
+		"NZL"
+		"SAF"
+		"RAJ"
+	}
+	bonuses={
+		0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+}
+all_playthrough_data={
+
+	{ "GER"
+ {
+			data={
+				first={
+					playthroughs=1					most_factories_built=0					successful_coups=0					liberated_nations=0					sunk_pride_of_the_fleet=0					shot_aces=0					successful_operations=0					recruited_operatives=0					captured_operatives=0					designed_ships=0					sunk_convoys=0					hosted_governments=0					admiral_traits_unlocked=0					puppeted_countries=0					licensed_foreign_military_tech=0					fought_civil_wars=0					general_traits_unlocked=0					designed_tanks=0					battles_against_encircled=0					battles_with_air_support=0					provinces_gained=0					provinces_lost=0					defensive_victories=0					forts_with_max_defense_defeated=0					destroyed_encircled_divisions=0					designed_planes=0					mussolini_missions=0					field_officers_promoted=0					ships_sunk_by_maritime=0					decrypted_ciphers=0					civilian_factories_built_1936=0					civilian_factories_built_1940=0					civilian_factories_built_1945=0					military_factories_built_1936=0					military_factories_built_1940=0					military_factories_built_1945=0					dockyards_built_1936=0					dockyards_built_1940=0					dockyards_built_1945=0					rocket_sites_built_1936=0					rocket_sites_built_1940=0					rocket_sites_built_1945=0					embargoed_countries=0					special_force_doctrines=0					built_tanks=0					built_ships=0					vehicles_received_by_lease=0					vehicles_sent_by_lease=0					planes_sent_as_volunteer_force=0					built_railway_guns=0					converted_vehicles=0					captured_equipment=0					deployed_cavalry_battalions=0					mio_size_ups=0					special_forces_deployed=0					equipment_sold=0					economic_capacity_exchanged=0					mobile_warfare_xp=0					superior_firepower_xp=0					grand_battleplan_xp=0					mass_assault_xp=0					fleet_in_being_xp=0					trade_interdiction_xp=0					base_strike_xp=0					strategic_destruction_xp=0					battlefield_support_xp=0					operational_integrity_xp=0					longest_battle_duration=0					largest_manpower_battle=0					largest_tanks_battle=0					largest_army=269600					largest_navy=38					largest_airforce=992					highest_casualty_war=0					highest_enemy_casualty_war=0					paratrooper_divisions=0					naval_invasions=0					aircrafts_in_region=0					aces_in_airbase=0					defensive_bonus_achieved=0					planning_bonus_achieved=0					encircled_divisions=0					battle_affecting_modifiers=0					totally_controlled_naval_regions=0					veteran_units=0					max_air_supply_to_region=0					railway_gun_supported_combats=0					level_up_skills=0					mined_sea_regions=0					province_gaining_weeks=0					decrypting_days_saved=0					deployed_airplanes_with_air_defense_bronze=0					deployed_airplanes_with_air_defense_silver=0					deployed_airplanes_with_air_defense_gold=0					deployed_high_speed_tanks=0					deployed_tanks_with_armor_rating_bronze=0					deployed_tanks_with_armor_rating_silver=0					deployed_tanks_with_armor_rating_gold=0					game_months=0					seconds_played=42					offensive_battles=0					defensive_battles=0					total_battles=0					hours_at_war=0					highest_casualty_civil_war=0					highest_enemy_casualty_civil_war=0					own_unknown_casualties=0					total_own_casualties=0					own_casualties=0					enemy_casualties=0					military_production_equipment=0					military_production_vehicles=0					military_production_air=0					air_production_fighter=0					air_production_interceptor=0					air_production_tactical_bomber=0					air_production_strategic_bomber=0					air_production_cas=0					air_production_naval_bomber=0					air_production_suicide=0					air_production_scout_plane=0					air_production_maritime_patrol_plane=0					tank_production_light=0					tank_production_medium=0					tank_production_heavy=0					tank_production_super_heavy=0					tank_production_modern=0					naval_production_submarine=0					naval_production_screen=0					naval_production_capital_ship=0					naval_production_carrier=0					naval_supremacy_score=0					bombed_trains=0					conquered_percentage=0					produced_combat_widths={
+						0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 					}
+					average_air_superiority={ 0 0}
+					new_bests={
+						0						0						0					}
+				}
+				second={
+					playthroughs=0					most_factories_built=0					successful_coups=0					liberated_nations=0					sunk_pride_of_the_fleet=0					shot_aces=0					successful_operations=0					recruited_operatives=0					captured_operatives=0					designed_ships=0					sunk_convoys=0					hosted_governments=0					admiral_traits_unlocked=0					puppeted_countries=0					licensed_foreign_military_tech=0					fought_civil_wars=0					general_traits_unlocked=0					designed_tanks=0					battles_against_encircled=0					battles_with_air_support=0					provinces_gained=0					provinces_lost=0					defensive_victories=0					forts_with_max_defense_defeated=0					destroyed_encircled_divisions=0					designed_planes=0					mussolini_missions=0					field_officers_promoted=0					ships_sunk_by_maritime=0					decrypted_ciphers=0					civilian_factories_built_1936=0					civilian_factories_built_1940=0					civilian_factories_built_1945=0					military_factories_built_1936=0					military_factories_built_1940=0					military_factories_built_1945=0					dockyards_built_1936=0					dockyards_built_1940=0					dockyards_built_1945=0					rocket_sites_built_1936=0					rocket_sites_built_1940=0					rocket_sites_built_1945=0					embargoed_countries=0					special_force_doctrines=0					built_tanks=0					built_ships=0					vehicles_received_by_lease=0					vehicles_sent_by_lease=0					planes_sent_as_volunteer_force=0					built_railway_guns=0					converted_vehicles=0					captured_equipment=0					deployed_cavalry_battalions=0					mio_size_ups=0					special_forces_deployed=0					equipment_sold=0					economic_capacity_exchanged=0					mobile_warfare_xp=0					superior_firepower_xp=0					grand_battleplan_xp=0					mass_assault_xp=0					fleet_in_being_xp=0					trade_interdiction_xp=0					base_strike_xp=0					strategic_destruction_xp=0					battlefield_support_xp=0					operational_integrity_xp=0					longest_battle_duration=0					largest_manpower_battle=0					largest_tanks_battle=0					largest_army=0					largest_navy=0					largest_airforce=0					highest_casualty_war=0					highest_enemy_casualty_war=0					paratrooper_divisions=0					naval_invasions=0					aircrafts_in_region=0					aces_in_airbase=0					defensive_bonus_achieved=0					planning_bonus_achieved=0					encircled_divisions=0					battle_affecting_modifiers=0					totally_controlled_naval_regions=0					veteran_units=0					max_air_supply_to_region=0					railway_gun_supported_combats=0					level_up_skills=0					mined_sea_regions=0					province_gaining_weeks=0					decrypting_days_saved=0					deployed_airplanes_with_air_defense_bronze=0					deployed_airplanes_with_air_defense_silver=0					deployed_airplanes_with_air_defense_gold=0					deployed_high_speed_tanks=0					deployed_tanks_with_armor_rating_bronze=0					deployed_tanks_with_armor_rating_silver=0					deployed_tanks_with_armor_rating_gold=0					game_months=0					seconds_played=0					offensive_battles=0					defensive_battles=0					total_battles=0					hours_at_war=0					highest_casualty_civil_war=0					highest_enemy_casualty_civil_war=0					own_unknown_casualties=0					total_own_casualties=0					own_casualties=0					enemy_casualties=0					military_production_equipment=0					military_production_vehicles=0					military_production_air=0					air_production_fighter=0					air_production_interceptor=0					air_production_tactical_bomber=0					air_production_strategic_bomber=0					air_production_cas=0					air_production_naval_bomber=0					air_production_suicide=0					air_production_scout_plane=0					air_production_maritime_patrol_plane=0					tank_production_light=0					tank_production_medium=0					tank_production_heavy=0					tank_production_super_heavy=0					tank_production_modern=0					naval_production_submarine=0					naval_production_screen=0					naval_production_capital_ship=0					naval_production_carrier=0					naval_supremacy_score=0					bombed_trains=0					conquered_percentage=0					produced_combat_widths={
+						0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 					}
+					average_air_superiority={ 0 0}
+					new_bests={
+						0						0						0					}
+				}
+				tag=""
+			}
+			intermediate_statistics={
+				recent_offensive_battles={
+					0				}
+				recent_defensive_battles={
+					0				}
+				recent_spawned_divisions={
+					0				}
+				recent_dropped_nukes={
+					0				}
+				recent_provinces_gained={
+					0				}
+				recent_provinces_lost={
+					0				}
+				recent_shot_down_airplanes={
+					0				}
+				recent_naval_invasion_divisions_transferred={
+					0				}
+				last_month_convoys_sunk={
+					0				}
+				controlled_provinces=0				province_gaining_weeks_intermediate=0			}
+			flags={
+			}
+			first_tag=no
+		}
+}
+}
+statistics_collection_enabled=yes
+checksum="74dcba4329ec29e5a939c4f2fde75489"

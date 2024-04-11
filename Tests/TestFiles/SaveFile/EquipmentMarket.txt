@@ -1,0 +1,8 @@
+﻿equipment_market={
+	contracts={
+	}
+	requests={
+{
+		}
+	}
+}

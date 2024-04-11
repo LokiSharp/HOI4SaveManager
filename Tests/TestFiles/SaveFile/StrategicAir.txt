@@ -1,0 +1,507 @@
+﻿strategic_air={
+	air_theatre_index={
+		id=0
+	}
+	air_group_index={
+		id=0
+	}
+	air_base={
+		id={ id=92 type=65 }
+		state=1
+		capacity=200
+		countries={
+			id={ id=804 type=4713 }
+			motorization_level=0
+			country="FRA"
+			capacity_penalty=1.000
+		}
+		is_rocket=no
+	}
+	GER={
+		air_wing_pool={
+			id={ id=1500 type=4713 }
+			definition=fighter
+			air_base={ id=11 type=65 }
+			air_wings={
+				id={ id=1 type=69 }
+				count=40
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=800
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1100 type=70 }
+						amount=40.000
+					}
+				}
+				name="Jagdgeschwader 232"
+				priority=1
+				allow_mission_type=2053
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		air_wing_pool={
+			id={ id=1501 type=4713 }
+			definition=fighter
+			air_base={ id=9 type=65 }
+			air_wings={
+				id={ id=2 type=69 }
+				count=80
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=1600
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				ace={ id=1502 type=4713 }
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1100 type=70 }
+						amount=80.000
+					}
+				}
+				name="Jagdgeschwader 132"
+				priority=1
+				allow_mission_type=2053
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		air_wing_pool={
+			id={ id=1503 type=4713 }
+			definition=tac_bomber
+			air_base={ id=9 type=65 }
+			air_wings={
+				id={ id=3 type=69 }
+				count=80
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=3200
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1096 type=70 }
+						amount=80.000
+					}
+				}
+				name="KG 1 'Hindenburg'"
+				priority=1
+				allow_mission_type=2826
+				air_untrained_pilots_penalty_factor=1.000
+			}
+			air_wings={
+				id={ id=4 type=69 }
+				count=40
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=1600
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1097 type=70 }
+						amount=40.000
+					}
+				}
+				name="Kampfgeschwader 153"
+				priority=1
+				allow_mission_type=2826
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		air_wing_pool={
+			id={ id=1504 type=4713 }
+			definition=transport_plane
+			air_base={ id=9 type=65 }
+			air_wings={
+				id={ id=5 type=69 }
+				count=80
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=6400
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=3 type=70 }
+						amount=80.000
+					}
+				}
+				name="LG Greifswald"
+				priority=1
+				allow_mission_type=1088
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		air_wing_pool={
+			id={ id=1505 type=4713 }
+			definition=tac_bomber
+			air_base={ id=10 type=65 }
+			air_wings={
+				id={ id=6 type=69 }
+				count=60
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=2400
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1096 type=70 }
+						amount=60.000
+					}
+				}
+				name="Kampfgeschwader 253"
+				priority=1
+				allow_mission_type=2826
+				air_untrained_pilots_penalty_factor=1.000
+			}
+			air_wings={
+				id={ id=7 type=69 }
+				count=60
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=2400
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1096 type=70 }
+						amount=60.000
+					}
+				}
+				name="KG 2 'Holzhammer'"
+				priority=1
+				allow_mission_type=2826
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		air_wing_pool={
+			id={ id=1506 type=4713 }
+			definition=cas
+			air_base={ id=10 type=65 }
+			air_wings={
+				id={ id=8 type=69 }
+				count=80
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=1600
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1101 type=70 }
+						amount=80.000
+					}
+				}
+				name="Sturzkampfgeschwader 162"
+				priority=1
+				allow_mission_type=2578
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		air_wing_pool={
+			id={ id=1507 type=4713 }
+			definition=fighter
+			air_base={ id=5 type=65 }
+			air_wings={
+				id={ id=9 type=69 }
+				count=60
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=1200
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1100 type=70 }
+						amount=60.000
+					}
+				}
+				name="Jagdgeschwader 134"
+				priority=1
+				allow_mission_type=2053
+				air_untrained_pilots_penalty_factor=1.000
+			}
+			air_wings={
+				id={ id=10 type=69 }
+				count=60
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=1200
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1100 type=70 }
+						amount=60.000
+					}
+				}
+				name="JG 1 Oesau"
+				priority=1
+				allow_mission_type=2053
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		air_wing_pool={
+			id={ id=1508 type=4713 }
+			definition=tac_bomber
+			air_base={ id=5 type=65 }
+			air_wings={
+				id={ id=11 type=69 }
+				count=80
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=3200
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1096 type=70 }
+						amount=80.000
+					}
+				}
+				name="Kampfgeschwader 152"
+				priority=1
+				allow_mission_type=2826
+				air_untrained_pilots_penalty_factor=1.000
+			}
+			air_wings={
+				id={ id=12 type=69 }
+				count=80
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=3200
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1096 type=70 }
+						amount=80.000
+					}
+				}
+				name="Kampfgeschwader 155"
+				priority=1
+				allow_mission_type=2826
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		air_wing_pool={
+			id={ id=1509 type=4713 }
+			definition=fighter
+			air_base={ id=3 type=65 }
+			air_wings={
+				id={ id=13 type=69 }
+				count=40
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=800
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1100 type=70 }
+						amount=40.000
+					}
+				}
+				name="Jagdgeschwader 136"
+				priority=1
+				allow_mission_type=2053
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		air_wing_pool={
+			id={ id=1510 type=4713 }
+			definition=tac_bomber
+			air_base={ id=3 type=65 }
+			air_wings={
+				id={ id=14 type=69 }
+				count=80
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=3200
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1096 type=70 }
+						amount=80.000
+					}
+				}
+				name="Kampfgeschwader 154"
+				priority=1
+				allow_mission_type=2826
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		air_wing_pool={
+			id={ id=1511 type=4713 }
+			definition=nav_bomber
+			air_base={ id=6 type=65 }
+			air_wings={
+				id={ id=15 type=69 }
+				count=72
+				experience=0.000
+				reinforcement_setting=1
+				timed_disabling={
+					remaining_hours=0
+					should_start_on_transfer=no
+				}
+				manpower=1440
+				mission={
+					type=0
+					period=2
+					active=no
+					missions_done=0
+				}
+				tag="GER"
+				equipment={
+					equipment={
+						id={ id=1104 type=70 }
+						amount=72.000
+					}
+				}
+				name="Küstenfliegergruppe 106"
+				priority=1
+				allow_mission_type=35088
+				air_untrained_pilots_penalty_factor=1.000
+			}
+		}
+		naval_strike_remaining={
+			0 137 6 162 0 10 41 0 0 0 47 14 6 0 0 0 0 0 0 2 71 0 0 159 7 18 3 0 0 0 0 0 0 0 3 53 0 0 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 0 0 0 35 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 18 0 0 0 0 0 7 1 34 70 0 100 24 30 0 41 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 317 0 0 0 24 0 20 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11 0 3 0 0 9 0 0 22 0 0 12 0 0 0 9 4 0 0 0 8 0 26 42 38 0 0 1 0 0 0 0 380 0 0 0 0 0 0 4 21 0 9 0 14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 27 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 18 0 0 7 0 0 0 0 0 28 0 0 0 0 
+		}
+		history={
+		}
+		combat_history={
+		}
+		quick_wing_deploy_selection={
+		}
+	}
+}

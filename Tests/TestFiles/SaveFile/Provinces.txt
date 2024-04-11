@@ -1,0 +1,34 @@
+﻿provinces={
+	1={
+	}
+	2={
+        victory_points=1
+    }
+	3={
+		buildings={
+			rail_way={
+				offsite_building=no
+				level={
+					100.000 100.000 
+				}
+			}
+		}
+	}
+	4={
+        victory_points=10
+        buildings={
+            supply_node={
+                offsite_building=no
+                level={
+                    100.000 
+                }
+            }
+            rail_way={
+                offsite_building=no
+                level={
+                    100.000 100.000 
+                }
+            }
+        }
+    }
+}

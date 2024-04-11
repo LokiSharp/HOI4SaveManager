@@ -1,0 +1,17 @@
+﻿faction={
+	id={ id=658 type=4713 }
+	name="轴心国"
+	icon=0
+	rules={
+		can_force_government=yes
+		can_send_volunteers=yes
+		can_puppet=yes
+	}
+	modifiers={
+	}
+	ideology=fascism
+	members={
+		"GER"
+	}
+	faction_leader_change_date="1936.1.1.12"
+}
