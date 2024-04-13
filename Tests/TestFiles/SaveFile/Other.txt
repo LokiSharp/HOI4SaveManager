@@ -135,6 +135,11 @@ power_balance={
 		}
 	}
 }
+entity={
+	id=3758096384
+	entity={
+	}
+}
 combat={
 	history={
 	}

@@ -61,8 +61,7 @@ public class Lexer(Reader reader) : IDisposable
                     return new TextToken(ReadScalar(), TokenType.Unquoted);
                 case '"':
                     ReadNextByte();
-                    var value = ReadScalar();
-                    return new TextToken(value, TokenType.Quoted);
+                    return new TextToken(ReadScalar(true), TokenType.Quoted);
                 default:
                     throw new Exception($"Unexpected character: {ch}");
             }
@@ -96,16 +95,23 @@ public class Lexer(Reader reader) : IDisposable
         return sb.ToString();
     }
 
-    private string ReadScalar()
+    private string ReadScalar(bool isQuoted = false)
     {
         var sb = new StringBuilder();
         while (true)
         {
             var nextByte = PeekNextByte();
-            if ((char)nextByte == '}') break;
-            if (nextByte == -1 || char.IsWhiteSpace((char)nextByte) || IsOperator((char)nextByte) || nextByte == '"')
+            if (!isQuoted)
             {
-                if (nextByte == '"') ReadNextByte();
+                if ((char)nextByte == '}') break;
+                if (nextByte == -1 || char.IsWhiteSpace((char)nextByte) || IsOperator((char)nextByte))
+                {
+                    break;
+                }
+            }
+            else if (nextByte == '"')
+            {
+                ReadNextByte();
                 break;
             }
 

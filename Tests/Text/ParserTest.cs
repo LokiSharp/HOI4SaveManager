@@ -78,7 +78,7 @@ public class ParserTest
     }
 
     [Fact]
-    public void Parse_SaveFile()
+    public void ParseFile_SaveFile()
     {
         HashSet<string> scriptPaths =
         [
@@ -100,8 +100,8 @@ public class ParserTest
         ];
         foreach (var scriptPath in scriptPaths)
         {
-            var node = new Parser(new Lexer(new Reader(TestFile.ReadFileInTestFile(scriptPath), false))).Parse();
-            var reParsedNode = new Parser(new Lexer(new Reader(node.ToString()!, false))).Parse();
+            var node = new Parser(new Lexer(new Reader(TestFile.ReadFileInTestFile(scriptPath), false))).ParseFile();
+            var reParsedNode = new Parser(new Lexer(new Reader(node.ToString()!, false))).ParseFile();
             Assert.NotNull(node);
             Assert.Equal(reParsedNode.ToString(), node.ToString());
         }

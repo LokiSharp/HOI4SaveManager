@@ -2,6 +2,17 @@
 
 public class Parser(Lexer lexer)
 {
+    public Node ParseFile()
+    {
+        var root = new RootNode();
+        while (lexer.PeekNextToken().TokenType is not TokenType.End)
+        {
+            root.ChildNodes.Add(Parse());
+        }
+
+        return root;
+    }
+
     public Node Parse()
     {
         var token = lexer.ReadNextToken();
@@ -57,7 +68,7 @@ public class Parser(Lexer lexer)
             return new RealNode(doubleValue);
         }
 
-        return new StringNode(token.Value);
+        return new StringNode(token.Value, token.TokenType == TokenType.Quoted);
     }
 
     private Node ParseBlock()
@@ -84,7 +95,7 @@ public class Parser(Lexer lexer)
     {
         var node = new AssignmentNode
         {
-            Name = new StringNode(token.Value),
+            Name = new StringNode(token.Value, false),
             Operator = ParseOperator(lexer.ReadNextToken()),
             Value = ParseToken(lexer.ReadNextToken())
         };
