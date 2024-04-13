@@ -6,6 +6,6 @@ public enum NodeType
     Int,
     Real,
     Operator,
-    Object,
+    Assignment,
     Array
 }

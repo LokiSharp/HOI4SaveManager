@@ -5,6 +5,8 @@ namespace Core.Text;
 public class Lexer(Reader reader) : IDisposable
 {
     private static readonly HashSet<char> Operators = ['=', '!', '>', '<'];
+    private TextToken? _nextToken;
+    private bool IsTokenBuffered => _nextToken is not null;
 
     public void Dispose()
     {
@@ -24,6 +26,13 @@ public class Lexer(Reader reader) : IDisposable
 
     public TextToken ReadNextToken()
     {
+        if (IsTokenBuffered)
+        {
+            var bufferedToken = _nextToken!;
+            _nextToken = null;
+            return bufferedToken;
+        }
+
         while (true)
         {
             var peek = PeekNextByte();
@@ -62,6 +71,16 @@ public class Lexer(Reader reader) : IDisposable
         return new TextToken(((char)ReadNextByte()).ToString(), TokenType.End);
     }
 
+    public TextToken PeekNextToken()
+    {
+        if (!IsTokenBuffered)
+        {
+            _nextToken = ReadNextToken();
+        }
+
+        return _nextToken!;
+    }
+
     private static bool IsOperator(char ch)
     {
         return Operators.Contains(ch);
@@ -83,6 +102,7 @@ public class Lexer(Reader reader) : IDisposable
         while (true)
         {
             var nextByte = PeekNextByte();
+            if ((char)nextByte == '}') break;
             if (nextByte == -1 || char.IsWhiteSpace((char)nextByte) || IsOperator((char)nextByte) || nextByte == '"')
             {
                 if (nextByte == '"') ReadNextByte();

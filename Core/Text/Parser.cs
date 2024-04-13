@@ -14,12 +14,15 @@ public class Parser(Lexer lexer)
         {
             case TokenType.Unquoted:
             case TokenType.Quoted:
-                return ParseValue(token);
+                return lexer.PeekNextToken().TokenType is TokenType.Operator
+                    ? ParseAssignment(token)
+                    : ParseValue(token);
             case TokenType.Operator:
                 return ParseOperator(token);
             case TokenType.BlockStart:
                 return ParseBlock();
             case TokenType.End:
+            case TokenType.BlockEnd:
             default:
                 throw new Exception($"Unexpected token: {token.TokenType} {token.Value}");
         }
@@ -42,7 +45,7 @@ public class Parser(Lexer lexer)
         return new OperatorNode(token.Value, operatorType);
     }
 
-    private static Node ParseValue(TextToken token)
+    private Node ParseValue(TextToken token)
     {
         if (int.TryParse(token.Value, out var intValue))
         {
@@ -73,6 +76,18 @@ public class Parser(Lexer lexer)
             node.ChildNodes.Add(ParseToken(token));
             token = lexer.ReadNextToken();
         }
+
+        return node;
+    }
+
+    private AssignmentNode ParseAssignment(TextToken token)
+    {
+        var node = new AssignmentNode
+        {
+            Name = new StringNode(token.Value),
+            Operator = ParseOperator(lexer.ReadNextToken()),
+            Value = ParseToken(lexer.ReadNextToken())
+        };
 
         return node;
     }
