@@ -1,4 +1,5 @@
-﻿using Core.Text;
+﻿using Core.Node;
+using Core.Text;
 using Tests.Utils;
 
 namespace Tests.Text;
@@ -13,7 +14,7 @@ public class ParserTest
         foreach (var node in statements.Select(statement =>
                      new Parser(new Lexer(new Reader(statement, false))).Parse()))
         {
-            Assert.Equal(NodeType.String, node.Type);
+            Assert.Equal(typeof(StringNode), node.GetType());
         }
     }
 
@@ -25,7 +26,7 @@ public class ParserTest
         foreach (var node in statements.Select(statement =>
                      new Parser(new Lexer(new Reader(statement, false))).Parse()))
         {
-            Assert.Equal(NodeType.Int, node.Type);
+            Assert.Equal(typeof(IntNode), node.GetType());
         }
     }
 
@@ -37,7 +38,7 @@ public class ParserTest
         foreach (var node in statements.Select(statement =>
                      new Parser(new Lexer(new Reader(statement, false))).Parse()))
         {
-            Assert.Equal(NodeType.Real, node.Type);
+            Assert.Equal(typeof(RealNode), node.GetType());
         }
     }
 
@@ -49,7 +50,7 @@ public class ParserTest
         foreach (var node in statements.Select(statement =>
                      new Parser(new Lexer(new Reader(statement, false))).Parse()))
         {
-            Assert.Equal(NodeType.Operator, node.Type);
+            Assert.Equal(typeof(OperatorNode), node.GetType());
         }
     }
 
@@ -61,7 +62,7 @@ public class ParserTest
         foreach (var node in statements.Select(statement =>
                      new Parser(new Lexer(new Reader(statement, false))).Parse()))
         {
-            Assert.Equal(NodeType.Array, node.Type);
+            Assert.Equal(typeof(ArrayNode), node.GetType());
         }
     }
 
@@ -73,7 +74,7 @@ public class ParserTest
         foreach (var node in statements.Select(statement =>
                      new Parser(new Lexer(new Reader(statement, false))).Parse()))
         {
-            Assert.Equal(NodeType.Assignment, node.Type);
+            Assert.Equal(typeof(AssignmentNode), node.GetType());
         }
     }
 
@@ -105,5 +106,13 @@ public class ParserTest
             Assert.NotNull(node);
             Assert.Equal(reParsedNode.ToString(), node.ToString());
         }
+    }
+
+    [Fact]
+    public void ParseFile_Hoi4Save()
+    {
+        var node = new Parser(new Lexer(new Reader(TestFile.ReadFileInTestFile("SaveFile/Hoi4Save.hoi4"), false)))
+            .ParseFile();
+        Assert.NotNull(node);
     }
 }

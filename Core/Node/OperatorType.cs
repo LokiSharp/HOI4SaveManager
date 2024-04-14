@@ -1,4 +1,4 @@
-﻿namespace Core.Text;
+﻿namespace Core.Node;
 
 public enum OperatorType
 {

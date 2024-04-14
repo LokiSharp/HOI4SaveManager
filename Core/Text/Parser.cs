@@ -1,25 +1,28 @@
-﻿namespace Core.Text;
+﻿using Core.Node;
+
+namespace Core.Text;
 
 public class Parser(Lexer lexer)
 {
-    public Node ParseFile()
+    private readonly RootNode _rootNode = new();
+
+    public RootNode ParseFile()
     {
-        var root = new RootNode();
         while (lexer.PeekNextToken().TokenType is not TokenType.End)
         {
-            root.ChildNodes.Add(Parse());
+            _rootNode._list.Add(Parse());
         }
 
-        return root;
+        return _rootNode;
     }
 
-    public Node Parse()
+    public Node.Node Parse()
     {
         var token = lexer.ReadNextToken();
         return ParseToken(token);
     }
 
-    private Node ParseToken(TextToken token)
+    private Node.Node ParseToken(TextToken token)
     {
         switch (token.TokenType)
         {
@@ -39,7 +42,7 @@ public class Parser(Lexer lexer)
         }
     }
 
-    private static OperatorNode ParseOperator(TextToken token)
+    private OperatorNode ParseOperator(TextToken token)
     {
         var operatorType = token.Value switch
         {
@@ -56,11 +59,11 @@ public class Parser(Lexer lexer)
         return new OperatorNode(token.Value, operatorType);
     }
 
-    private Node ParseValue(TextToken token)
+    private Node.Node ParseValue(TextToken token)
     {
         if (int.TryParse(token.Value, out var intValue))
         {
-            return new IntNode(intValue);
+            return new Core.Node.IntNode(intValue);
         }
 
         if (double.TryParse(token.Value, out var doubleValue))
@@ -71,7 +74,7 @@ public class Parser(Lexer lexer)
         return new StringNode(token.Value, token.TokenType == TokenType.Quoted);
     }
 
-    private Node ParseBlock()
+    private Node.Node ParseBlock()
     {
         var node = ParseArray();
         return node;
@@ -84,7 +87,7 @@ public class Parser(Lexer lexer)
 
         while (token.TokenType != TokenType.BlockEnd)
         {
-            node.ChildNodes.Add(ParseToken(token));
+            node._list.Add(ParseToken(token));
             token = lexer.ReadNextToken();
         }
 
@@ -93,7 +96,7 @@ public class Parser(Lexer lexer)
 
     private AssignmentNode ParseAssignment(TextToken token)
     {
-        var node = new AssignmentNode
+        var node = new AssignmentNode()
         {
             Name = new StringNode(token.Value, false),
             Operator = ParseOperator(lexer.ReadNextToken()),
