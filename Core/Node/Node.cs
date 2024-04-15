@@ -43,4 +43,13 @@ public abstract partial class Node
 
         Parent = parent;
     }
+
+    public ArrayNode AsArray()
+    {
+        var array = this as ArrayNode;
+
+        if (array is null) throw new Exception();
+
+        return array;
+    }
 }

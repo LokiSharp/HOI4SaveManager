@@ -102,7 +102,7 @@ public class ParserTest
         foreach (var scriptPath in scriptPaths)
         {
             var node = new Parser(new Lexer(new Reader(TestFile.ReadFileInTestFile(scriptPath), false))).ParseFile();
-            var reParsedNode = new Parser(new Lexer(new Reader(node.ToString()!, false))).ParseFile();
+            var reParsedNode = new Parser(new Lexer(new Reader(node.ToString(), false))).Parse();
             Assert.NotNull(node);
             Assert.Equal(reParsedNode.ToString(), node.ToString());
         }
@@ -114,5 +114,6 @@ public class ParserTest
         var node = new Parser(new Lexer(new Reader(TestFile.ReadFileInTestFile("SaveFile/Hoi4Save.hoi4"), false)))
             .ParseFile();
         Assert.NotNull(node);
+        Assert.Equal(74, node.AsArray().Count);
     }
 }

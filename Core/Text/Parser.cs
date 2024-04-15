@@ -4,13 +4,13 @@ namespace Core.Text;
 
 public class Parser(Lexer lexer)
 {
-    private readonly RootNode _rootNode = new();
+    private readonly ArrayNode _rootNode = new();
 
-    public RootNode ParseFile()
+    public ArrayNode ParseFile()
     {
         while (lexer.PeekNextToken().TokenType is not TokenType.End)
         {
-            _rootNode._list.Add(Parse());
+            _rootNode.Add(Parse());
         }
 
         return _rootNode;
@@ -84,12 +84,12 @@ public class Parser(Lexer lexer)
     {
         var node = new ArrayNode();
         var token = lexer.ReadNextToken();
-
         while (token.TokenType != TokenType.BlockEnd)
         {
-            node._list.Add(ParseToken(token));
+            node.Add(ParseToken(token));
             token = lexer.ReadNextToken();
         }
+
 
         return node;
     }
