@@ -2,6 +2,6 @@
 
 public partial class ValueNode(string value, bool isQuoted = false) : Node
 {
-    public string Value { get; private set; } = value;
-    public bool IsQuoted { get; private set; } = isQuoted;
-};
+    public string Value { get; } = value;
+    public bool IsQuoted { get; } = isQuoted;
+}

@@ -6,7 +6,10 @@ public sealed partial class ArrayNode : IList<Node?>
 {
     internal List<Node?> List => _list ?? [];
 
-    public IEnumerator<Node?> GetEnumerator() => List.GetEnumerator();
+    public IEnumerator<Node?> GetEnumerator()
+    {
+        return List.GetEnumerator();
+    }
 
     IEnumerator IEnumerable.GetEnumerator()
     {
@@ -32,9 +35,15 @@ public sealed partial class ArrayNode : IList<Node?>
         list.Clear();
     }
 
-    public bool Contains(Node? item) => List.Contains(item);
+    public bool Contains(Node? item)
+    {
+        return List.Contains(item);
+    }
 
-    public void CopyTo(Node?[] array, int arrayIndex) => List.CopyTo(array, arrayIndex);
+    public void CopyTo(Node?[] array, int arrayIndex)
+    {
+        List.CopyTo(array, arrayIndex);
+    }
 
     public bool Remove(Node? item)
     {
@@ -45,7 +54,11 @@ public sealed partial class ArrayNode : IList<Node?>
 
     public int Count => List.Count;
     public bool IsReadOnly => false;
-    public int IndexOf(Node? item) => List.IndexOf(item);
+
+    public int IndexOf(Node? item)
+    {
+        return List.IndexOf(item);
+    }
 
     public void Insert(int index, Node? item)
     {

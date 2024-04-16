@@ -7,5 +7,5 @@ public enum OperatorType : byte
     LessThan, // <
     GreaterThan, // >
     LessThanOrEqual, // <=
-    GreaterThanOrEqual, // >=
+    GreaterThanOrEqual // >=
 }

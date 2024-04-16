@@ -2,19 +2,11 @@
 
 public partial class ArrayNode
 {
-    public override string ToString()
-    {
-        return ToStringIfWithIndent(false);
-    }
+    public override string ToString() => ToStringIfWithIndent(false);
 
     public override string ToStringIfWithIndent(bool indent)
     {
-        if (indent)
-        {
-            return ToStringIfWithIndent(0);
-        }
-
-        return $"{{{string.Join(" ", _list.Select(child => child.ToString()))}}}";
+        return indent ? ToStringIfWithIndent(0) : $"{{{string.Join(" ", _list.Select(child => child.ToString()))}}}";
     }
 
     public override string ToStringIfWithIndent(int indentLevel)

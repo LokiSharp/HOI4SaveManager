@@ -2,10 +2,7 @@
 
 public partial class AssignmentNode
 {
-    public override string ToString()
-    {
-        return ToStringIfWithIndent(false);
-    }
+    public override string ToString() => ToStringIfWithIndent(false);
 
     public override string ToStringIfWithIndent(bool indent)
     {
