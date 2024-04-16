@@ -61,17 +61,7 @@ public class Parser(Lexer lexer)
 
     private Node.Node ParseValue(TextToken token)
     {
-        if (int.TryParse(token.Value, out var intValue))
-        {
-            return new Core.Node.IntNode(intValue);
-        }
-
-        if (double.TryParse(token.Value, out var doubleValue))
-        {
-            return new RealNode(doubleValue);
-        }
-
-        return new StringNode(token.Value, token.TokenType == TokenType.Quoted);
+        return new ValueNode(token.Value, token.TokenType == TokenType.Quoted);
     }
 
     private Node.Node ParseBlock()
@@ -98,7 +88,7 @@ public class Parser(Lexer lexer)
     {
         var node = new AssignmentNode()
         {
-            Name = new StringNode(token.Value, false),
+            Name = new ValueNode(token.Value),
             Operator = ParseOperator(lexer.ReadNextToken()),
             Value = ParseToken(lexer.ReadNextToken())
         };

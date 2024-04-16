@@ -1,6 +1,6 @@
 ﻿namespace Core.Node;
 
-public class StringNode(string value, bool isQuoted) : Node
+public class ValueNode(string value, bool isQuoted = false) : Node
 {
     public string Value { get; private set; } = value;
     public bool IsQuoted { get; private set; } = isQuoted;
@@ -13,13 +13,13 @@ public class StringNode(string value, bool isQuoted) : Node
     public override string ToString(bool indent) => ToString();
     public override string ToString(int indentLevel) => ToString();
 
-    public string ToQuotedString()
+    private string ToQuotedString()
     {
         return $"\"{Value}\"";
     }
 
-    public string ToUnquotedString()
+    private string ToUnquotedString()
     {
         return Value;
     }
-}
+};

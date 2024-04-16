@@ -14,7 +14,7 @@ public class ParserTest
         foreach (var node in statements.Select(statement =>
                      new Parser(new Lexer(new Reader(statement, false))).Parse()))
         {
-            Assert.Equal(typeof(StringNode), node.GetType());
+            Assert.Equal(typeof(ValueNode), node.GetType());
         }
     }
 
@@ -26,7 +26,7 @@ public class ParserTest
         foreach (var node in statements.Select(statement =>
                      new Parser(new Lexer(new Reader(statement, false))).Parse()))
         {
-            Assert.Equal(typeof(IntNode), node.GetType());
+            Assert.Equal(typeof(ValueNode), node.GetType());
         }
     }
 
@@ -38,7 +38,7 @@ public class ParserTest
         foreach (var node in statements.Select(statement =>
                      new Parser(new Lexer(new Reader(statement, false))).Parse()))
         {
-            Assert.Equal(typeof(RealNode), node.GetType());
+            Assert.Equal(typeof(ValueNode), node.GetType());
         }
     }
 

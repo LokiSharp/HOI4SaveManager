@@ -46,10 +46,19 @@ public abstract partial class Node
 
     public ArrayNode AsArray()
     {
-        var array = this as ArrayNode;
+        if (this is not ArrayNode node) throw new Exception();
+        return node;
+    }
 
-        if (array is null) throw new Exception();
+    public ValueNode AsValue()
+    {
+        if (this is not ValueNode node) throw new Exception();
+        return node;
+    }
 
-        return array;
+    public AssignmentNode AsAssignment()
+    {
+        if (this is not AssignmentNode node) throw new Exception();
+        return node;
     }
 }

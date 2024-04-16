@@ -2,7 +2,7 @@
 
 public class AssignmentNode : Node
 {
-    public StringNode Name { get; init; }
+    public ValueNode Name { get; init; }
     public OperatorNode Operator { get; init; }
     public Node Value { get; init; }
 
@@ -20,6 +20,6 @@ public class AssignmentNode : Node
     public override string ToString(int indentLevel)
     {
         var valueString = Value.ToString(indentLevel);
-        return $"{Name.ToUnquotedString()} {Operator.Value} {valueString}";
+        return $"{Name.Value} {Operator.Value} {valueString}";
     }
 }
