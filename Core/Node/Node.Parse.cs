@@ -1,40 +1,48 @@
-﻿using Core.Node;
+﻿using Core.Text;
 
-namespace Core.Text;
+namespace Core.Node;
 
-public class Parser(Lexer lexer)
+public abstract partial class Node
 {
-    private readonly ArrayNode _rootNode = new();
+    public static ArrayNode ParseFile(string input) => ParseFile(new Reader(input, false));
 
-    public ArrayNode ParseFile()
+    public static ArrayNode ParseFile(Reader reader) => ParseFile(new Lexer(reader));
+
+    public static ArrayNode ParseFile(Lexer lexer)
     {
+        ArrayNode rootNode = new();
+
         while (lexer.PeekNextToken().TokenType is not TokenType.End)
         {
-            _rootNode.Add(Parse());
+            rootNode.Add(Parse(lexer));
         }
 
-        return _rootNode;
+        return rootNode;
     }
 
-    public Node.Node Parse()
+    public static Node Parse(string input) => Parse(new Reader(input, false));
+
+    public static Node Parse(Reader reader) => Parse(new Lexer(reader));
+
+    public static Node Parse(Lexer lexer)
     {
         var token = lexer.ReadNextToken();
-        return ParseToken(token);
+        return ParseToken(token, lexer);
     }
 
-    private Node.Node ParseToken(TextToken token)
+    private static Node ParseToken(TextToken token, Lexer lexer)
     {
         switch (token.TokenType)
         {
             case TokenType.Unquoted:
             case TokenType.Quoted:
                 return lexer.PeekNextToken().TokenType is TokenType.Operator
-                    ? ParseAssignment(token)
+                    ? ParseAssignment(token, lexer)
                     : ParseValue(token);
             case TokenType.Operator:
                 return ParseOperator(token);
             case TokenType.BlockStart:
-                return ParseBlock();
+                return ParseBlock(lexer);
             case TokenType.End:
             case TokenType.BlockEnd:
             default:
@@ -42,7 +50,7 @@ public class Parser(Lexer lexer)
         }
     }
 
-    private OperatorNode ParseOperator(TextToken token)
+    private static OperatorNode ParseOperator(TextToken token)
     {
         var operatorType = token.Value switch
         {
@@ -59,24 +67,24 @@ public class Parser(Lexer lexer)
         return new OperatorNode(token.Value, operatorType);
     }
 
-    private Node.Node ParseValue(TextToken token)
+    private static Node ParseValue(TextToken token)
     {
         return new ValueNode(token.Value, token.TokenType == TokenType.Quoted);
     }
 
-    private Node.Node ParseBlock()
+    private static Node ParseBlock(Lexer lexer)
     {
-        var node = ParseArray();
+        var node = ParseArray(lexer);
         return node;
     }
 
-    private ArrayNode ParseArray()
+    private static ArrayNode ParseArray(Lexer lexer)
     {
         var node = new ArrayNode();
         var token = lexer.ReadNextToken();
         while (token.TokenType != TokenType.BlockEnd)
         {
-            node.Add(ParseToken(token));
+            node.Add(ParseToken(token, lexer));
             token = lexer.ReadNextToken();
         }
 
@@ -84,13 +92,13 @@ public class Parser(Lexer lexer)
         return node;
     }
 
-    private AssignmentNode ParseAssignment(TextToken token)
+    private static AssignmentNode ParseAssignment(TextToken token, Lexer lexer)
     {
-        var node = new AssignmentNode()
+        var node = new AssignmentNode
         {
             Name = new ValueNode(token.Value),
             Operator = ParseOperator(lexer.ReadNextToken()),
-            Value = ParseToken(lexer.ReadNextToken())
+            Value = ParseToken(lexer.ReadNextToken(), lexer)
         };
 
         return node;

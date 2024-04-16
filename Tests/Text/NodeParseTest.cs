@@ -1,18 +1,16 @@
 ﻿using Core.Node;
-using Core.Text;
 using Tests.Utils;
 
 namespace Tests.Text;
 
-public class ParserTest
+public class NodeParseTest
 {
     [Fact]
     public void Parse_String()
     {
         HashSet<string> statements =
             ["foo", "bar"];
-        foreach (var node in statements.Select(statement =>
-                     new Parser(new Lexer(new Reader(statement, false))).Parse()))
+        foreach (var node in statements.Select(Node.Parse))
         {
             Assert.Equal(typeof(ValueNode), node.GetType());
         }
@@ -23,8 +21,7 @@ public class ParserTest
     {
         HashSet<string> statements =
             ["-100", "-10", "-1", "0", "1", "100", "1000"];
-        foreach (var node in statements.Select(statement =>
-                     new Parser(new Lexer(new Reader(statement, false))).Parse()))
+        foreach (var node in statements.Select(Node.Parse))
         {
             Assert.Equal(typeof(ValueNode), node.GetType());
         }
@@ -35,8 +32,7 @@ public class ParserTest
     {
         HashSet<string> statements =
             ["-100.0", "-10.0", "-1.0", "0.0", "1.0", "100.0", "1000.0", "3.14"];
-        foreach (var node in statements.Select(statement =>
-                     new Parser(new Lexer(new Reader(statement, false))).Parse()))
+        foreach (var node in statements.Select(Node.Parse))
         {
             Assert.Equal(typeof(ValueNode), node.GetType());
         }
@@ -47,8 +43,7 @@ public class ParserTest
     {
         HashSet<string> statements =
             ["=", "!=", "<>", "<", ">", "<=", ">="];
-        foreach (var node in statements.Select(statement =>
-                     new Parser(new Lexer(new Reader(statement, false))).Parse()))
+        foreach (var node in statements.Select(Node.Parse))
         {
             Assert.Equal(typeof(OperatorNode), node.GetType());
         }
@@ -59,8 +54,7 @@ public class ParserTest
     {
         HashSet<string> statements =
             ["{ 0 0 }", "{ foo bar }"];
-        foreach (var node in statements.Select(statement =>
-                     new Parser(new Lexer(new Reader(statement, false))).Parse()))
+        foreach (var node in statements.Select(Node.Parse))
         {
             Assert.Equal(typeof(ArrayNode), node.GetType());
         }
@@ -71,8 +65,7 @@ public class ParserTest
     {
         HashSet<string> statements =
             ["0 = 0", "foo = bar"];
-        foreach (var node in statements.Select(statement =>
-                     new Parser(new Lexer(new Reader(statement, false))).Parse()))
+        foreach (var node in statements.Select(Node.Parse))
         {
             Assert.Equal(typeof(AssignmentNode), node.GetType());
         }
@@ -101,8 +94,8 @@ public class ParserTest
         ];
         foreach (var scriptPath in scriptPaths)
         {
-            var node = new Parser(new Lexer(new Reader(TestFile.ReadFileInTestFile(scriptPath), false))).ParseFile();
-            var reParsedNode = new Parser(new Lexer(new Reader(node.ToString(), false))).Parse();
+            var node = Node.ParseFile(TestFile.ReadFileInTestFile(scriptPath));
+            var reParsedNode = Node.Parse(node.ToString());
             Assert.NotNull(node);
             Assert.Equal(reParsedNode.ToString(), node.ToString());
         }
@@ -111,8 +104,7 @@ public class ParserTest
     [Fact]
     public void ParseFile_Hoi4Save()
     {
-        var node = new Parser(new Lexer(new Reader(TestFile.ReadFileInTestFile("SaveFile/Hoi4Save.hoi4"), false)))
-            .ParseFile();
+        var node = Node.ParseFile(TestFile.ReadFileInTestFile("SaveFile/Hoi4Save.hoi4"));
         Assert.NotNull(node);
         Assert.Equal(74, node.AsArray().Count);
     }
