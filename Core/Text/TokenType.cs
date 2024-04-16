@@ -1,6 +1,6 @@
 ﻿namespace Core.Text;
 
-public enum TokenType
+public enum TokenType : byte
 {
     Unquoted,
     Quoted,

@@ -1,6 +1,6 @@
 ﻿namespace Core.Node;
 
-public enum OperatorType
+public enum OperatorType : byte
 {
     Equal, // =
     NotEqual, // !=, <>
