@@ -2,6 +2,6 @@ namespace Core.Node;
 
 public abstract partial class Node
 {
-    public abstract string ToString(bool indent);
-    public abstract string ToString(int indentLevel);
+    public abstract string ToStringIfWithIndent(bool indent);
+    public abstract string ToStringIfWithIndent(int indentLevel);
 }
